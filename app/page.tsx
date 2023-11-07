@@ -16,10 +16,9 @@ const News = () => {
   const fetchNewsfromAPI = async () => {
     try {
       // Call the api to fetch the news
-      const apiresponse = await axios.get('http://localhost:5000/api/news', { params: { searchTerm: newsSearchTerm } }); 
+      const apiresponse = await axios.get('http://localhost:5000/api/news'); 
       //set the returned result to news array
       setNews(apiresponse.data.response.results);
-      console.log(apiresponse.data.response.results);
     } catch (error) {
       console.error('Error fetching news:', error);
     }

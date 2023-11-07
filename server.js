@@ -16,7 +16,6 @@ app.use((req, res, next) => {
 // Proxy route to fetch data from the external API
 app.get('/api/news', async (req, res) => {
   try {
-    console.log(req.params);
     const response = await axios.get(`${apiUrl}`);
     res.json(response.data);
   } catch (error) {
