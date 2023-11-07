@@ -6,7 +6,10 @@ First, To access the API, you will need to <a href="https://open-platform.thegua
 
 Second, replace the api key (NEXT_PUBLIC_THEGUARDIAN_REST_API_KEY) in .env file
 
-Then, run the development server:
+Third, run the proxy server
+node server.js
+
+Then, in another terminal run the development server:
 
 ```bash
 npm run dev
@@ -19,6 +22,8 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+Open [http://localhost:5000/api/nes](http://localhost:5000/api/news) to see the news api fetch results (json).
 
  `app/page.tsx` file contains the following functionality
  - Fetch the news from <a href="https://open-platform.theguardian.com/documentation/" target="_blank">The Guardian Rest API</a>
